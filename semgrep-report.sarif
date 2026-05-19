@@ -1,0 +1,523 @@
+{
+    "version": "2.1.0",
+    "runs": [
+        {
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "toolExecutionNotifications": [
+                    ]
+                }
+            ],
+            "results": [
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "b35c25dff4b7ee354b4b1d32382e342199da179ef293295b900368b43b43aa04a30985ac497d853eedf70a325e5d8908d2f210653128684164323a35413e0541_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 75,
+                                    "endLine": 74,
+                                    "snippet": {
+                                        "text": "                ctx.status(400).result(\"Invalid data: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 74
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "e0ef988ef0983d3377f8143d72d25211c6960e537ae7d72ff3904f1020fc0b3fa076874fcf7af14dbc066dd6c0de33243ae152a7fe457d8a2d47b12e72d062f7_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 75,
+                                    "endLine": 74,
+                                    "snippet": {
+                                        "text": "                ctx.status(400).result(\"Invalid data: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 74
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure-result"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "b35c25dff4b7ee354b4b1d32382e342199da179ef293295b900368b43b43aa04a30985ac497d853eedf70a325e5d8908d2f210653128684164323a35413e0541_1"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 75,
+                                    "endLine": 115,
+                                    "snippet": {
+                                        "text": "                ctx.status(400).result(\"Invalid data: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 115
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "e0ef988ef0983d3377f8143d72d25211c6960e537ae7d72ff3904f1020fc0b3fa076874fcf7af14dbc066dd6c0de33243ae152a7fe457d8a2d47b12e72d062f7_1"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 75,
+                                    "endLine": 115,
+                                    "snippet": {
+                                        "text": "                ctx.status(400).result(\"Invalid data: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 115
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure-result"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "7650ca713368697293b55268ad4f3e052bfb2414fc60369ce19c6fe2894eda2ca6e1eac38f06d1704ba1544891a535937b6a638fba4a58c23dca72f2d2a69b53_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 69,
+                                    "endLine": 154,
+                                    "snippet": {
+                                        "text": "            File reportFile = new File(REPORTS_BASE_DIR + filename);"
+                                    },
+                                    "startColumn": 13,
+                                    "startLine": 154
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-22: Path traversal — user-controlled value concatenated directly into file path. Use Path.normalize() and verify the result starts with the intended base directory.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "path-traversal-file-concat"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "233f23ef5f09a5b998820bf0d57c3903f982ea4ab4ad8144afc4c8ab304da37a77e0758f17d7736b07bc8ea6305e5cde727bcd6b25f1d52f507676030b5bd9d9_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 68,
+                                    "endLine": 157,
+                                    "snippet": {
+                                        "text": "                try (FileWriter writer = new FileWriter(reportFile)) {"
+                                    },
+                                    "startColumn": 22,
+                                    "startLine": 157
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-434/CWE-22: Writing to a file whose path is constructed from user input. Attacker may write to arbitrary locations (path traversal + arbitrary file write).\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "unrestricted-file-write"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "b35c25dff4b7ee354b4b1d32382e342199da179ef293295b900368b43b43aa04a30985ac497d853eedf70a325e5d8908d2f210653128684164323a35413e0541_2"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 85,
+                                    "endLine": 163,
+                                    "snippet": {
+                                        "text": "                ctx.status(500).result(\"Failed to write report: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 163
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "3764c7c700f194624ad811de5013b6a9d82c84ced97f4ec934ad9fd71eebf6e08105aa482f42ded8b5c6b549bec32cdcf6ddbff2993b0d8d733a4c6b8de7cf52_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 85,
+                                    "endLine": 163,
+                                    "snippet": {
+                                        "text": "                ctx.status(500).result(\"Failed to write report: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 163
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure-result"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "c93d362069b2d0a3bb8f7d8e9972e7dcc0044c02cf06118a07a114f2a217987f2411c1097ab14940db182f191504eb20bdc16b93a73c87fce787c2c7f4017830_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 48,
+                                    "endLine": 180,
+                                    "snippet": {
+                                        "text": "                URL url = new URL(callbackUrl);"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 180
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-918: SSRF — URL constructed from a variable (likely user-controlled). Validate and allowlist URL schemes/hosts before opening connections.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "ssrf-url-from-param"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "b35c25dff4b7ee354b4b1d32382e342199da179ef293295b900368b43b43aa04a30985ac497d853eedf70a325e5d8908d2f210653128684164323a35413e0541_3"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 82,
+                                    "endLine": 189,
+                                    "snippet": {
+                                        "text": "                ctx.status(500).result(\"Notification failed: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 189
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "3764c7c700f194624ad811de5013b6a9d82c84ced97f4ec934ad9fd71eebf6e08105aa482f42ded8b5c6b549bec32cdcf6ddbff2993b0d8d733a4c6b8de7cf52_1"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "src\\main\\java\\ru\\itmo\\testing\\lab4\\controller\\UserAnalyticsController.java",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 82,
+                                    "endLine": 189,
+                                    "snippet": {
+                                        "text": "                ctx.status(500).result(\"Notification failed: \" + e.getMessage());"
+                                    },
+                                    "startColumn": 17,
+                                    "startLine": 189
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                    },
+                    "properties": {
+                    },
+                    "ruleId": "error-info-disclosure-result"
+                }
+            ],
+            "tool": {
+                "driver": {
+                    "name": "Semgrep OSS",
+                    "rules": [
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n",
+                                "text": "CWE-209: Exception message exposed in HTTP response. Internal implementation details (class names, stack internals) may leak to the client. Return a generic error message instead.\n"
+                            },
+                            "id": "error-info-disclosure",
+                            "name": "error-info-disclosure",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-209",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: error-info-disclosure"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-209: Exception message exposed in HTTP response without sanitization.\n",
+                                "text": "CWE-209: Exception message exposed in HTTP response without sanitization.\n"
+                            },
+                            "id": "error-info-disclosure-result",
+                            "name": "error-info-disclosure-result",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-209",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: error-info-disclosure-result"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-22: Path traversal — user-controlled value concatenated directly into file path. Use Path.normalize() and verify the result starts with the intended base directory.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-22: Path traversal — user-controlled value concatenated directly into file path. Use Path.normalize() and verify the result starts with the intended base directory.\n",
+                                "text": "CWE-22: Path traversal — user-controlled value concatenated directly into file path. Use Path.normalize() and verify the result starts with the intended base directory.\n"
+                            },
+                            "id": "path-traversal-file-concat",
+                            "name": "path-traversal-file-concat",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-22",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: path-traversal-file-concat"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-918: SSRF — URL constructed from a variable (likely user-controlled). Validate and allowlist URL schemes/hosts before opening connections.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-918: SSRF — URL constructed from a variable (likely user-controlled). Validate and allowlist URL schemes/hosts before opening connections.\n",
+                                "text": "CWE-918: SSRF — URL constructed from a variable (likely user-controlled). Validate and allowlist URL schemes/hosts before opening connections.\n"
+                            },
+                            "id": "ssrf-url-from-param",
+                            "name": "ssrf-url-from-param",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-918",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: ssrf-url-from-param"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-434/CWE-22: Writing to a file whose path is constructed from user input. Attacker may write to arbitrary locations (path traversal + arbitrary file write).\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-434/CWE-22: Writing to a file whose path is constructed from user input. Attacker may write to arbitrary locations (path traversal + arbitrary file write).\n",
+                                "text": "CWE-434/CWE-22: Writing to a file whose path is constructed from user input. Attacker may write to arbitrary locations (path traversal + arbitrary file write).\n"
+                            },
+                            "id": "unrestricted-file-write",
+                            "name": "unrestricted-file-write",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-434",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: unrestricted-file-write"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-79: String concatenation directly into HTML response. User-controlled data in $EXPR may allow XSS if not sanitized.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-79: String concatenation directly into HTML response. User-controlled data in $EXPR may allow XSS if not sanitized.\n",
+                                "text": "CWE-79: String concatenation directly into HTML response. User-controlled data in $EXPR may allow XSS if not sanitized.\n"
+                            },
+                            "id": "xss-html-direct-concat",
+                            "name": "xss-html-direct-concat",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-79",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: xss-html-direct-concat"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "fullDescription": {
+                                "text": "CWE-79: User data concatenated directly into HTML response without escaping. Use StringEscapeUtils.escapeHtml4() or similar before inserting user-controlled values.\n"
+                            },
+                            "help": {
+                                "markdown": "CWE-79: User data concatenated directly into HTML response without escaping. Use StringEscapeUtils.escapeHtml4() or similar before inserting user-controlled values.\n",
+                                "text": "CWE-79: User data concatenated directly into HTML response without escaping. Use StringEscapeUtils.escapeHtml4() or similar before inserting user-controlled values.\n"
+                            },
+                            "id": "xss-html-string-concat",
+                            "name": "xss-html-string-concat",
+                            "properties": {
+                                "precision": "very-high",
+                                "tags": [
+                                    "CWE-79",
+                                    "security"
+                                ]
+                            },
+                            "shortDescription": {
+                                "text": "Semgrep Finding: xss-html-string-concat"
+                            }
+                        }
+                    ],
+                    "semanticVersion": "1.161.0"
+                }
+            }
+        }
+    ],
+    "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/schemas/sarif-schema-2.1.0.json"
+}
