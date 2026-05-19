@@ -1,0 +1,88 @@
+rules:
+  - id: xss-html-string-concat
+    patterns:
+      - pattern: |
+          String $HTML = ... + $VAR.get$Method() + ...;
+          $CTX.contentType("text/html").result($HTML);
+      - pattern-not: |
+          String $HTML = ... + StringEscapeUtils.$ESC($VAR.get$Method()) + ...;
+    message: >
+      CWE-79: User data concatenated directly into HTML response without escaping.
+      Use StringEscapeUtils.escapeHtml4() or similar before inserting user-controlled values.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      cwe: CWE-79
+
+  - id: xss-html-direct-concat
+    pattern: |
+      $CTX.contentType("text/html").result(... + $EXPR + ...);
+    message: >
+      CWE-79: String concatenation directly into HTML response. User-controlled data
+      in $EXPR may allow XSS if not sanitized.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      cwe: CWE-79
+
+  - id: path-traversal-file-concat
+    pattern: |
+      new File($BASE + $PARAM);
+    message: >
+      CWE-22: Path traversal — user-controlled value concatenated directly into file path.
+      Use Path.normalize() and verify the result starts with the intended base directory.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      cwe: CWE-22
+
+  - id: ssrf-url-from-param
+    patterns:
+      - pattern: |
+          new URL($URL_VAR);
+      - pattern-not: |
+          new URL("...");
+    message: >
+      CWE-918: SSRF — URL constructed from a variable (likely user-controlled).
+      Validate and allowlist URL schemes/hosts before opening connections.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      cwe: CWE-918
+
+  - id: error-info-disclosure
+    pattern: |
+      $CTX.status(...).result(... + $E.getMessage());
+    message: >
+      CWE-209: Exception message exposed in HTTP response. Internal implementation
+      details (class names, stack internals) may leak to the client. Return a generic
+      error message instead.
+    languages: [java]
+    severity: WARNING
+    metadata:
+      cwe: CWE-209
+
+  - id: error-info-disclosure-result
+    pattern: |
+      $CTX.result(... + $E.getMessage());
+    message: >
+      CWE-209: Exception message exposed in HTTP response without sanitization.
+    languages: [java]
+    severity: WARNING
+    metadata:
+      cwe: CWE-209
+
+  - id: unrestricted-file-write
+    patterns:
+      - pattern: |
+          new FileWriter($FILE);
+      - pattern-inside: |
+          File $FILE = new File($BASE + $PARAM);
+          ...
+    message: >
+      CWE-434/CWE-22: Writing to a file whose path is constructed from user input.
+      Attacker may write to arbitrary locations (path traversal + arbitrary file write).
+    languages: [java]
+    severity: ERROR
+    metadata:
+      cwe: CWE-434
